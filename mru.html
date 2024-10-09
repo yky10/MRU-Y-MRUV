@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimiento Rectilíneo Uniforme (MRU)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesmru.css">
+</head>
+<body>
+    <header>
+        <h1>Movimiento Rectilíneo Uniforme (MRU)</h1>
+        <a href="index.html"><img src="exit.png" alt="Logo de la universidad" class="Logo"></a>
+    </header>
+
+    <section>
+        <h2 class="tituloCalculo">Cálculos para MRU</h2>
+        <p>En física, el Movimiento Rectilíneo Uniforme (MRU) describe el desplazamiento de un objeto en línea recta a una velocidad constante, con aceleración nula.</p>
+        
+        <article class="grid-container">
+            <!-- Cálculo de Velocidad -->
+            <form id="form-mru-velocidad">
+                <h3 class="formTitulo">Calcular Velocidad</h3>
+                <p>La velocidad se puede calcular usando la fórmula \(v = \frac{d}{t}\), donde \(d\) es la distancia y \(t\) es el tiempo.</p>
+                <img src="movimiento-rectilineo-uniforme-1.jpg"alt="Descripción de la imagen" style="max-width: 50%; height: auto;">
+                <label for="distancia-vel">Distancia (m):</label>
+                <input type="number" id="distancia-vel" required>
+                <label for="tiempo-vel">Tiempo (s):</label>
+                <input type="number" id="tiempo-vel" required>
+                <button type="button" onclick="calcularVelocidad()">Calcular Velocidad</button>
+                <p id="resultado-velocidad"></p>
+            </form>
+
+            <!-- Cálculo de Tiempo -->
+            <form id="form-mru-tiempo">
+                <h3 class="formTitulo">Calcular Tiempo</h3>
+                <p>El tiempo se determina con la fórmula \(t = \frac{d}{v}\), donde \(d\) es la distancia y \(v\) es la velocidad.</p>
+                <img src="TIEMPO.svg" alt="Descripción de la imagen" style="max-width: 50%; height: auto;">
+                <label for="distancia-tmp">Distancia (m):</label>
+                <input type="number" id="distancia-tmp" required>
+                <label for="velocidad-tmp">Velocidad (m/s):</label>
+                <input type="number" id="velocidad-tmp" required>
+                <button type="button" onclick="calcularTiempo()">Calcular Tiempo</button>
+                <p id="resultado-tiempo"></p>
+            </form>
+
+            <!-- Cálculo de Distancia -->
+            <form id="form-mru-distancia">
+                <h3 class="formTitulo">Calcular Distancia</h3>
+                <p>La distancia se puede calcular utilizando la fórmula \(d = v \cdot t\), donde \(v\) es la velocidad y \(t\) es el tiempo.</p>
+                <img src="DISTANCIA.jpg" alt="Descripción de la imagen" style="max-width: 50%; height: auto;">
+                <label for="velocidad-dist">Velocidad (m/s):</label>
+                <input type="number" id="velocidad-dist" required>
+                <label for="tiempo-dist">Tiempo (s):</label>
+                <input type="number" id="tiempo-dist" required>
+                <button type="button" onclick="calcularDistancia()">Calcular Distancia</button>
+                <p id="resultado-distancia"></p>
+            </form>
+        </article>
+    </section>
+
+    <footer>
+        <h1>Yoshua Kevin Yafeth de León Ovalle</h1>
+        <h2>2290-21-19116</h2>
+    </footer>
+
+    <script src="codigomru.js"></script>
+</body>
+</html>

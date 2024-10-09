@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimiento Rectilíneo Uniformemente Variado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesmru.css">
+</head>
+<body>
+    <header>
+        <h1>MRUV: Movimiento Rectilíneo Uniformemente Variado</h1>
+        <a href="index.html"><img src="exit.png" alt="Logo" class="Logo"></a>
+    </header>
+
+    <section>
+        <h2 class="tituloCalculo">Cálculos para MRUV</h2>
+        <p>El MRUV describe un movimiento en línea recta con aceleración constante. La ecuación principal es \(x = x_0 + v_0 \cdot t + \frac{1}{2} a \cdot t^2\).</p>
+        
+        <article class="grid-container">
+            <!-- Cálculo de Distancia -->
+            <form id="form-mruv-distancia">
+                <h3 class="formTitulo">Calcular Distancia</h3>
+                <p>La distancia recorrida por un objeto en movimiento se puede calcular con la velocidad inicial, el tiempo y la aceleración constante.</p>
+                <img src="distancia.png" alt="Descripción de la imagen" style="max-width: 50%; height: auto;">
+                <label for="velocidad-inicial">Velocidad Inicial (m/s):</label>
+                <input type="number" id="velocidad-inicial-dist" required>
+                <label for="aceleracion">Aceleración (m/s²):</label>
+                <input type="number" id="aceleracion-dist" required>
+                <label for="tiempo">Tiempo (s):</label>
+                <input type="number" id="tiempo-dist" required>
+                <button type="button" onclick="calcularDistanciaMRUV()">Calcular</button>
+                <p id="resultado-distancia-mruv"></p>
+            </form>
+
+            <!-- Cálculo de Aceleración -->
+            <form id="form-mruv-aceleracion">
+                <h3 class="formTitulo">Calcular Aceleración</h3>
+                <p>La aceleración se calcula a partir de la variación de la velocidad en un intervalo de tiempo.</p>    
+                <!-- Imagen añadida aquí -->
+                <img src="acelaracion.png" alt="Descripción de la imagen" style="max-width: 50%; height: auto;">
+            
+                <label for="velocidad-inicial">Velocidad Inicial (m/s):</label>
+                <input type="number" id="velocidad-inicial" required>
+                
+                <label for="velocidad-final">Velocidad Final (m/s):</label>
+                <input type="number" id="velocidad-final" required>
+                
+                <label for="tiempo">Tiempo (s):</label>
+                <input type="number" id="tiempo-acel" required>
+                
+                <button type="button" onclick="calcularAceleracion()">Calcular</button>
+                <p id="resultado-aceleracion"></p>
+            </form>
+            
+
+            <!-- Cálculo de Velocidad Final -->
+            <form id="form-mruv-velocidad-final">
+                <h3 class="formTitulo">Calcular Velocidad Final</h3>
+                <p>La velocidad final se obtiene al añadir la aceleración a la velocidad inicial durante un tiempo dado.</p>
+                <img src="distancia.png" alt="Descripción de la imagen" style="max-width: 50%; height: auto;">
+                <label for="velocidad-inicial">Velocidad Inicial (m/s):</label>
+                <input type="number" id="velocidad-inicial-final" required>
+                <label for="aceleracion">Aceleración (m/s²):</label>
+                <input type="number" id="aceleracion-final" required>
+                <label for="tiempo">Tiempo (s):</label>
+                <input type="number" id="tiempo-final" required>
+                <button type="button" onclick="calcularVelocidadFinal()">Calcular</button>
+                <p id="resultado-velocidad-final"></p>
+            </form>
+        </article>
+    </section>
+
+    <footer>
+        <h1>Yoshua Kevin Yafeth de León Ovalle</h1>
+        <h2>2290-21-19116</h2>
+    </footer>
+</body>
+<script src="codigomru.js"></script>
+</html>
